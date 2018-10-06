@@ -12,7 +12,6 @@ class List extends Component {
     this.handleSubmitTwo = this.handleSubmitTwo.bind(this);
     this.handleSubmitThree = this.handleSubmitThree.bind(this);
 
-    this.handleLeft = this.handleLeft.bind(this);
   }
 
   sectionOne(){
@@ -24,24 +23,26 @@ class List extends Component {
         </form>
         <ul className='list-container'>
           {this.state.one.map((el) => <li>
-          {el}<button onClick={this.handleLeft}>X</button></li>)}
+          {el}<button onClick={this.handleLeft} className='right-button'></button></li>)}
         </ul>
       </div>;
-  }
-
-  handleLeft(e){
-    console.log(e.target.value)
   }
 
   sectionTwo() {
     return <div className="second-section">
         <p className="title">Second</p>
         <form>
-        <input type="text" value={this.state.entryTwo} onChange={this.handleInputTwo()} className='input-field'/>
-        <button onClick={this.handleSubmitTwo} className='submit-button'>X</button>
+          <input type="text" value={this.state.entryTwo} onChange={this.handleInputTwo()} className="input-field" />
+          <button onClick={this.handleSubmitTwo} className="submit-button">
+            X
+          </button>
         </form>
-        <ul className='list-container'>
-          {this.state.two.map(el => <li>{el}</li>)}
+        <ul className="list-container">
+          {this.state.two.map(el => <li>
+              <button className='left-button'></button>
+              {el}
+              <button className='right-button'></button>
+            </li>)}
         </ul>
       </div>;
   }
@@ -50,11 +51,16 @@ class List extends Component {
     return <div className="third-section">
         <p className="title">Third</p>
         <form>
-        <input type="text" value={this.state.entryThree} onChange={this.handleInputThree()} className='input-field'/>
-          <button onClick={this.handleSubmitThree} className='submit-button'>X</button>
+          <input type="text" value={this.state.entryThree} onChange={this.handleInputThree()} className="input-field" />
+          <button onClick={this.handleSubmitThree} className="submit-button">
+            X
+          </button>
         </form>
-        <ul className='list-container'>
-          {this.state.three.map(el => <li>{el}</li>)}
+        <ul className="list-container">
+          {this.state.three.map(el => <li>
+              <button className="left-button"></button>
+              {el}
+            </li>)}
         </ul>
       </div>;
   }
