@@ -1,0 +1,54 @@
+.main {
+    display: inline-flex;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.first-section {
+   height: 500px;
+   background-color: green;
+   border: 2px solid black;
+   margin: 10px; 
+   width: 200px;
+   border-radius: 10px;
+}
+
+.second-section {
+   height: 500px;
+   background-color: orange;
+   border: 2px solid black; 
+   margin: 10px; 
+   width: 200px;
+   border-radius: 10px;
+}
+
+.third-section {
+   height: 500px;
+   background-color: red;
+   border: 2px solid black; 
+   margin: 10px; 
+   width: 200px;
+   border-radius: 10px;
+}
+
+.input-field {
+    margin-left: 18px;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.submit-button {
+    background-color: #75a8f9;
+    margin-left: 10px;
+    height: 33px;
+}
+
+.list-container {
+    list-style: none;
+    color: white;
+    font-size: 22px;
+}
