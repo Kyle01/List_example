@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import List from './list'
+import List from './list';
+import Map from './map';
 import "./style.css";
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div>
         <List />
+        <Map />
       </div>
     );
   }
